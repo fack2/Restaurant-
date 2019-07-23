@@ -1,10 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const request = require('request');
 
 const homeHandler = (request, response) => {
-	const filePath = path.join(__dirname, '../', '../', 'public', 'index.html');
-	console.log('file path', filePath);
+	const filePath = path.join(__dirname, '..', '..', 'public', 'index.html');
 	fs.readFile(filePath, (error, file) => {
 		if (error) {
 			console.log(error);
@@ -31,8 +29,8 @@ const publicHandler = (request, response, endpoint) => {
 		jpg: 'image/jpg'
 	};
 
-	const filePath = path.join(__dirname, '../', '../', endpoint);
-	console.log('file path', filePath);
+	const filePath = path.join(__dirname, '..', '..', endpoint);
+
 	fs.readFile(filePath, (error, file) => {
 		if (error) {
 			console.log(error);
