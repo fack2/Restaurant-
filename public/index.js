@@ -10,10 +10,12 @@ const request = (url, cb) => {
 			console.log(error);
 		});
 };
-const cuisineInput = document.getElementsByTagName('li');
+const cuisineInput = document.querySelectorAll('img.cuisine');
+console.log(cuisineInput);
 
-cuisineInput.addEventListener('click', function(event) {
-	console.log(cuisineInput.alt);
-	//  event.preventDefault();
-	//	request(`/cuisine=${cuisineInput.alt}`, (data) => {});
+cuisineInput.forEach((element) => {
+	element.addEventListener('click', function(event) {
+		console.log(element.alt);
+		request(`/cuisine=${element.alt}`);
+	});
 });
