@@ -5,7 +5,7 @@ const router = (request, response) => {
 		homeHandler(request, response);
 	} else if (endpoint.indexOf('public') !== -1) {
 		publicHandler(request, response, endpoint);
-	} else if (endpoint === '/cuisine') {
+	} else if (endpoint.indexOf('/cuisine') !== -1) {
 		cuisineHandler(request, response);
 	} else {
 		response.writeHead(404, { 'Content-Type': 'text/html' });

@@ -47,7 +47,10 @@ const publicHandler = (request, response, endpoint) => {
 	});
 };
 
-const cuisineHandler = (request, response) => {};
+const cuisineHandler = (request, response) => {
+	response.writeHead(200, { 'Content-Type': 'application/json' });
+	response.end(JSON.stringify({ name: 'rand' }));
+};
 
 module.exports = {
 	homeHandler,

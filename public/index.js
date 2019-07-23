@@ -16,5 +16,9 @@ console.log(cuisineInput);
 cuisineInput.forEach((element) => {
 	element.addEventListener('click', function(event) {
 		console.log(element.alt);
+		console.log(`/cuisine=${element.alt}`);
+		request(`/cuisine=${element.alt}`, (data) => {
+			console.log(data);
+		});
 	});
 });
