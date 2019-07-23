@@ -5,14 +5,13 @@
 
 .logo {
     display: block;
-    margin: auto;
-    width: 69%;
-    margin-top: 13px;
+    margin: 3% 15% 0% 15%;
+    width: 70%;
 }
 
 .cuisine {
     display: block;
-    margin: 27px 0px 0px 136px;
+    margin: 7% 35% 2% 35%;
     width: 30%;
     border: 1px solid black;
     border-radius: 5%;
