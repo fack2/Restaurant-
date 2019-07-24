@@ -1,39 +1,35 @@
 BEGIN;
-DROP TABLE IF EXISTS restaurant CASCADE;
-DROP TABLE IF EXISTS details CASCADE;
+DROP TABLE IF EXISTS restaurant, cuisine CASCADE;
+
+create table cuisine(
+  id serial primary key,
+  name varchar(100) not null
+);
+
+insert into cuisine (name)
+values('fastfood') , ('traditional'), ('cafe');
 
 
 create table restaurant(
   id serial primary key,
+  cuisine_id int REFERENCES cuisine(id),
   res_name varchar(100) not null,
-  cuisine varchar(100) not null,
   res_img text not null,
-location text not null
+location text not null,
+phone text not null,
+delivery boolean not null,
+facebook text not null,
+menu_img text not null
 );
 
-insert into restaurant(res_name,cuisine,res_img,location)
-   values ('Roza Crunchy','fast food','/public/image/rozaimg.png','Hebron-Ein sharah'),
-('KFC','fast food','/public/image/kfcimg.png','Hebron-Ein sharah'),
-('Abu Mazin','traditional','/public/image/Abumazin.jpg','Hebron-Ras Aljora'),
-('Tabon Al reef','traditional','/public/image/reefimg.jpg','Hebron-Ras Aljora'),
-('Segafredo','cafe','/public/image/segafredo.png','Hebron-Ras Aljora'),
-('Q-Candy','cafe','/public/image/Qcandy.jpg','Hebron-Ibn Rushd');
-
-create table details(
- res_id INT  REFERENCES restaurant(id),
- phone text not null,
- delivery text not null,
- facebook text not null,
- menu_img text not null
+insert into restaurant(cuisine_id,res_name,res_img,location, phone, delivery, facebook, menu_img)
+   values ('1','Roza Crunchy','rozaimg.png','Hebron-Ein sharah', '02 221 4839',true,'RozaCrunchy/','rosamenu.jpg'),
+('1','KFC','kfcimg.png','Hebron-Ein sharah', '22225922',true,'KFC-Hebron-1456433234462574/','kfc 1.jpg'),
+('2','Abu Mazin','Abumazin.jpg','Hebron-Ras Aljora','22213833',false,'%D9%85%D8%B7%D8%B9%D9%85-%D8%A7%D8%A8%D9%88-%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84-297047843646900/','Abumazin2.jpg'),
+('2','Tabon Al reef','reefimg.jpg','Hebron-Ras Aljora', '0593 044 104',true,'tabonalreef/?ref=br_rs','reef2.jpg'),
+('3','Segafredo','segafredo.png','Hebron-Ras Aljora','599067882',false,'Segafredo-Hebron-254121865390478/','segafredo2.jpg'),
+('3','Q-Candy','Qcandy.jpg','Hebron-Ibn Rushd', '0569 301 212',false,'Qcandy/','Qcandy1.jpg');
 
 
-);
 
-insert into details (phone, delivery,facebook, menu_img)
-values('02 221 4839','yes','https://www.facebook.com/RozaCrunchy/','/public/image/rosamenu.jpg'),
-('22225922','yes',' https://www.facebook.com/KFC-Hebron-1456433234462574/','/public/image/kfc 1.jpg'),
-('22213833','no','https://www.facebook.com/%D9%85%D8%B7%D8%B9%D9%85-%D8%A7%D8%A8%D9%88-%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84-297047843646900/','/public/image/Abumazin2.jpg'),
-('0593 044 104','yes','https://www.facebook.com/tabonalreef/?ref=br_rs','/public/image/reef1'),
-('599067882','no','https://www.facebook.com/Segafredo-Hebron-254121865390478/','/public/image/segafredo2.jpg'),
-('0569 301 212','no','https://www.facebook.com/Qcandy/','/public/image/Qcandy1.jpg');
 COMMIT;
