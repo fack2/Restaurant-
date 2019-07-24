@@ -1,5 +1,5 @@
 BEGIN;
-  DROP TABLE IF EXISTS restaurant, cuisine
+  DROP TABLE IF EXISTS restaurant
   CASCADE;
 
 
