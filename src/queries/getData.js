@@ -1,7 +1,7 @@
 const dbConnection = require('../database/db_connection');
 
-const getData = cb => {
-    dbConnection.query('select res_name from restaurant', (err, res) => {
+const getData = (type, cb) => {
+    dbConnection.query(`select res_name from restaurant where cuisine = $1`, [type], (err, res) => {
         if (err) {
             return cb(err);
         }

@@ -49,11 +49,13 @@ const publicHandler = (request, response, endpoint) => {
 };
 
 const cuisineHandler = (request, response) => {
-
-    getData((error, result) => {
+    const type = request.url.split('=')[1];
+    getData(type, (error, result) => {
         if (error) {
             return error;
         }
+        console.log('result', result);
+
         let dynamicData = JSON.stringify(result)
         response.writeHead(200, {
             'Content-Type': 'application/json'

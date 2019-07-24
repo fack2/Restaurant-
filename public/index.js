@@ -12,13 +12,19 @@ const request = (url, cb) => {
 };
 
 
-
-
-const cuisineInput = document.querySelectorAll('img.cuisine');
-cuisineInput.forEach((element) => {
-    element.addEventListener('click', function() {
-        console.log(element.alt);
-        console.log(`/cuisine=${element.alt}`);
-
+const cuisineDivs = document.querySelectorAll(".type");
+const ul = document.createElement("ul");
+cuisineDivs.forEach((element) => {
+    const img = document.querySelector(`#${element.id} img`);
+    img.addEventListener('click', () => {
+        request(`/cuisine=${img.alt}`, (data) => {
+            data.forEach(ele => {
+                const li = document.createElement("li");
+                li.textContent = ele.res_name;
+                ul.appendChild(li);
+            });
+            element.appendChild(ul);
+        });
+        ul.innerText = "";
     });
 });
