@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const getData = require('../queries/getData')
 
 const homeHandler = (request, response) => {
     const filePath = path.join(__dirname, '..', '..', 'public', 'index.html');

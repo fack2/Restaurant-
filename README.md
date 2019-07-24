@@ -20,24 +20,23 @@ name.
 
 ## File Structure:
 
+- assets
+
 - public:
 
   - index.html
   - style.css
   - index.js
+  - images
 
 - src:
 
   - database:
-    - test:
-      - test.js
     - db_build.js
     - db_build.sql
     - db_connection.js
 
   - server:
-    - test:
-      - test.js
     - handler.js
     - router.js
     - server.js
@@ -45,6 +44,9 @@ name.
   - queries
     - getData.js
     - postData.js
+    
+  - test
+    - test.js
 
 - .env
 - .gitignore
@@ -52,7 +54,7 @@ name.
 - README.md
 
 ## Schema:
-![Untitled Diagram](https://user-images.githubusercontent.com/47992412/61702284-3631e180-ad48-11e9-8fd0-dd972d876d10.png)
+![Untitled Diagram](https://user-images.githubusercontent.com/47992412/61787023-9479c580-ae17-11e9-8c36-6f908467a08b.png)
 
 
 ## Team:

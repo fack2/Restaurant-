@@ -6,7 +6,7 @@ BEGIN;
 create table restaurant
 (
   id serial primary key,
-  cuisine_id int REFERENCES cuisine(id),
+  cuisine varchar(100) not null,
   res_name varchar(100) not null,
   location text not null,
   phone text not null,
