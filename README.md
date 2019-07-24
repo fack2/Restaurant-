@@ -15,47 +15,52 @@ name.
 - As a user I should see some details about the restaurant I chose.
 
 ## Wireframe:
-![Screenshot from 2019-07-23 11-46-42](https://user-images.githubusercontent.com/47992412/61702031-c9b6e280-ad47-11e9-9567-ef289dd72c26.png)
 
+![Screenshot from 2019-07-23 11-46-42](https://user-images.githubusercontent.com/47992412/61702031-c9b6e280-ad47-11e9-9567-ef289dd72c26.png)
 
 ## File Structure:
 
-- assets
-
 - public:
 
+  - images:
+    - 1.png
+    - 2.png
+    - 3.png
   - index.html
   - style.css
   - index.js
-  - images
 
 - src:
 
   - database:
+
     - db_build.js
     - db_build.sql
     - db_connection.js
 
+  - queries:
+
+    - getData.js
+    - postData.js
+
   - server:
+    - test:
+      - test.js
     - handler.js
     - router.js
     - server.js
+  - test:
+    - databaseTest.js
 
-  - queries
-    - getData.js
-    - postData.js
-    
-  - test
-    - test.js
-
-- .env
-- .gitignore
-- .travis.yml
-- README.md
+* config.env
+* .gitignore
+* .travis.yml
+* package.json
+* README.md
 
 ## Schema:
-![Untitled Diagram](https://user-images.githubusercontent.com/47992412/61787023-9479c580-ae17-11e9-8c36-6f908467a08b.png)
 
+![Untitled Diagram](https://user-images.githubusercontent.com/47992412/61787023-9479c580-ae17-11e9-8c36-6f908467a08b.png)
 
 ## Team:
 

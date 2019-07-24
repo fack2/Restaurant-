@@ -1,5 +1,5 @@
 const test = require("tape");
-const test = require("../handler");
+const router = require("../router");
 const supertest = require("supertest");
 
 test("Testing tape", t => {
@@ -7,9 +7,13 @@ test("Testing tape", t => {
 	t.end();
 });
 
-
 test("Testing home endpoint", t => {
-	supertest("../handler.js")
+	supertest(router)
 		.get("/")
-	.expect(200)
+		.expect(200)
+		.expect("Content-Type", /html/)
+		.end((error, result) => {
+			t.error(error);
+			t.end();
+		});
 });
