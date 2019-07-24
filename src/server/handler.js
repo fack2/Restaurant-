@@ -1,6 +1,16 @@
 const fs = require('fs');
 const path = require('path');
-const getData = require('../queries/getData')
+const getData = require('../queries/getData');
+const postData = require('../queries/postData');
+const querystring = require('querystring');
+
+
+
+const serverError = (err, response) => {
+    response.writeHead(500, 'Content-Type:text/html');
+    response.end('<h1>Sorry, there was a problem loading the page</h1>');
+    console.log(err);
+};
 
 const homeHandler = (request, response) => {
     const filePath = path.join(__dirname, '..', '..', 'public', 'index.html');
@@ -65,8 +75,34 @@ const cuisineHandler = (request, response) => {
 
 };
 
+const postDataHandler = (request, response) => {
+    let body = '';
+    request.on('data', chunk => {
+        body += chunk.toString();
+    });
+    request.on('end', () => {
+        console.log("body is", body)
+        const {
+            cuisine,
+            res_name,
+            location,
+            phone,
+            delivery
+        } = querystring.parse(body);
+        postData(cuisine, res_name, location, phone, delivery, err => {
+            if (err) return serverError(err, response);
+            response.writeHead(302, {
+                'Location': '/'
+            });
+            response.end()
+        });
+    });
+};
+
+
 module.exports = {
     homeHandler,
     publicHandler,
-    cuisineHandler
+    cuisineHandler,
+    postDataHandler
 };

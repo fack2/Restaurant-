@@ -25,19 +25,22 @@
     </div>
 
     <div class="container">
-        <form id="contact" action="" method="post">
+        <form id="contact" action="/create-rest" method="post">
             <h3>Add Restaurant</h3>
             <fieldset>
-                <input placeholder="cuisine.." type="email" tabindex="2" required>
+                <input placeholder="cuisine.." type="cuisine" name="cuisine" required>
             </fieldset>
             <fieldset>
-                <input placeholder="Rest Name..." type="text" tabindex="1" required autofocus>
+                <input placeholder="Rest Name..." type="name" name="res_name" required autofocus>
             </fieldset>
             <fieldset>
-                <input placeholder="location" type="tel" tabindex="3" required>
+                <input placeholder="location" type="loc" name="location" required>
             </fieldset>
             <fieldset>
-                <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
+                <input placeholder="phone" type="tel" name="phone" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="delivery" type="del" name="delivery" required>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

@@ -19,81 +19,51 @@
 }
 
 .container {
-    max-width: 400px;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     position: relative;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button[type="submit"] {
-    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-}
-
 #contact {
     background: #F9F9F9;
-    padding: 25px;
-    margin: 150px 0;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 6%;
+    margin: 38% 0%;
+    box-shadow: 0 0 20px 0 rgba(68, 19, 4, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #contact h3 {
     display: block;
     font-size: 30px;
     font-weight: 300;
-    margin-bottom: 10px;
-}
-
-#contact h4 {
-    margin: 5px 0 15px;
-    display: block;
-    font-size: 13px;
-    font-weight: 400;
+    margin-bottom: 5%;
 }
 
 fieldset {
     border: medium none !important;
-    margin: 0 0 10px;
+    margin: 0 0 4%;
     min-width: 100%;
     padding: 0;
     width: 100%;
 }
 
-#contact input[type="Name"],
-#contact input[type="cuisine"],
-#contact input[type="tel"],
-#contact input[type="url"] {
-    width: 100%;
+#contact input {
+    width: 92%;
     border: 1px solid #ccc;
     background: #FFF;
     margin: 0 0 5px;
     padding: 10px;
 }
 
-#contact button[type="submit"] {
+#contact button {
     cursor: pointer;
     width: 100%;
     border: none;
-    background: #4CAF50;
+    background: rgb(230, 64, 14);
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px;
     font-size: 15px;
 }
-
-
-/* li {
-    counter-reset: li;
-    list-style: none;
-    font: 15px 'trebuchet MS', 'lucida sans';
-    padding: 0;
-    margin-bottom: 4em;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-} */
 
 li {
     font-family: 'Yanone Kaffeesatz', sans-serif;
