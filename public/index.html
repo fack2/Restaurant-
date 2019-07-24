@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hebron Rest</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="public/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <img class="logo" src="../assets/logo.png" />
+    <img class="logo" src="public/images/logo.png" />
 
     <div class="cuisine-container">
         <div id="fastfood" class="type">
@@ -23,6 +23,28 @@
             <ul class="traditional" id="traditional"></ul>
         </div>
     </div>
+
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h3>Add Restaurant</h3>
+            <fieldset>
+                <input placeholder="cuisine.." type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Rest Name..." type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="location" type="tel" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+    <script src="public/index.js"></script>
 </body>
 
 </html>
