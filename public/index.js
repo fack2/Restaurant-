@@ -39,9 +39,7 @@ cuisineDivs.forEach((element) => {
 				const li = document.createElement('li');
 
 				const imageName = ele.res_name.replace(/ /g, '');
-				// if (`./ public / images / ${ imageName }.png`){
-				// 	imageName='default';
-				// }
+				
 
 				restaurantLogo.src = `./public/images/${imageName}.png`;
 				console.log(restaurantLogo.src);
@@ -63,6 +61,4 @@ cuisineDivs.forEach((element) => {
 	});
 });
 
-submit.addEventListener('click', function() {
-	//	request(`/create-rest?type=${input.value}&name=`, (data) => {});
-});
+
