@@ -14,6 +14,8 @@ const request = (url, cb) => {
 const cuisineDivs = document.querySelectorAll('.type');
 const ul = document.createElement('ul');
 
+const submit = document.getElementById('contact-submit');
+
 cuisineDivs.forEach((element) => {
 	const img = document.querySelector(`#${element.id} img`);
 	img.addEventListener('click', () => {
@@ -35,8 +37,12 @@ cuisineDivs.forEach((element) => {
 				const li = document.createElement('li');
 
 				const imageName = ele.res_name.replace(/ /g, '');
-				console.log(imageName);
+				// if (`./ public / images / ${ imageName }.png`){
+				// 	imageName='default';
+				// }
+
 				restaurantLogo.src = `./public/images/${imageName}.png`;
+				console.log(restaurantLogo.src);
 				let delivery = 'Yes';
 				if (!ele.delivery) {
 					delivery = 'No';
@@ -52,4 +58,8 @@ cuisineDivs.forEach((element) => {
 		});
 		ul.innerText = '';
 	});
+});
+
+submit.addEventListener('click', function() {
+	//	request(`/create-rest?type=${input.value}&name=`, (data) => {});
 });
