@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "node src/server/test/test.js | tap-spec",
-		"testdb": "node src/database/test/test.js",
+		"testdb": "node src/test/databaseTest.js",
 		"start": "node src/server/server.js",
 		"dev": "nodemon src/server/server.js "
 	},

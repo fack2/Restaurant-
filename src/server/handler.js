@@ -12,6 +12,7 @@ const serverError = (err, response) => {
     console.log(err);
 };
 
+
 const homeHandler = (request, response) => {
     const filePath = path.join(__dirname, '..', '..', 'public', 'index.html');
     fs.readFile(filePath, (error, file) => {

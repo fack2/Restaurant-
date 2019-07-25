@@ -38,14 +38,6 @@
     margin-bottom: 5%;
 }
 
-fieldset {
-    border: medium none !important;
-    margin: 0 0 4%;
-    min-width: 100%;
-    padding: 0;
-    width: 100%;
-}
-
 #contact input {
     width: 92%;
     border: 1px solid #ccc;
