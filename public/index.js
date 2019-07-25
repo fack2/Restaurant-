@@ -28,9 +28,11 @@ cuisineDivs.forEach((element) => {
 				const restaurantLogo = document.createElement('img');
 				restaurantLogo.setAttribute('width', '20%');
 				restaurantLogo.setAttribute('height', '20%');
+				const resName = document.createElement('p');
 				const deliviry = document.createElement('p');
 				const phone = document.createElement('p');
 				restaurantContent.appendChild(restaurantLogo);
+				restaurantContent.appendChild(resName);
 				restaurantContent.appendChild(deliviry);
 				restaurantContent.appendChild(phone);
 
@@ -43,6 +45,7 @@ cuisineDivs.forEach((element) => {
 
 				restaurantLogo.src = `./public/images/${imageName}.png`;
 				console.log(restaurantLogo.src);
+				resName.innerText = ele.res_name;
 				let delivery = 'Yes';
 				if (!ele.delivery) {
 					delivery = 'No';

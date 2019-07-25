@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,27 +25,18 @@
             
         </div>
     </div>
+
     <div class="container">
         <form id="contact" action="/create-rest" method="post">
             <h3>Add Restaurant</h3>
-            <fieldset>
-                <input placeholder="cuisine.." type="cuisine" name="cuisine" required>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Rest Name..." type="name" name="res_name" required autofocus>
-            </fieldset>
-            <fieldset>
-                <input placeholder="location" type="loc" name="location" required>
-            </fieldset>
-            <fieldset>
-                <input placeholder="phone" type="tel" name="phone" required>
-            </fieldset>
-            <fieldset>
-                <input placeholder="delivery" type="del" name="delivery" required>
-            </fieldset>
-            <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-            </fieldset>
+
+            <input placeholder="cuisine.." type="cuisine" name="cuisine" required>
+            <input placeholder="Rest Name..." type="name" name="res_name" required autofocus>
+            <input placeholder="location" type="loc" name="location" required>
+            <input placeholder="phone" type="tel" name="phone" required>
+            <input placeholder="delivery" type="del" name="delivery" required>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+
         </form>
     </div>
     <script src="public/index.js"></script>
