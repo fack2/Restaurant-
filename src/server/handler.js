@@ -92,6 +92,7 @@ const addRestaurantHandler = (req, res) => {
 			console.log('data', data);
 			console.log('result', result);
 		});
+		res.writeHead(302, { Location: '/' });
 		res.end(JSON.stringify(result));
 	});
 };
