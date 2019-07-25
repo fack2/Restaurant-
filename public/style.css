@@ -59,6 +59,10 @@
 
 li {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 24px;
+	font-size: 26px;
 	margin: 6% 0% 5% 40%;
+}
+
+label {
+	color: white;
 }

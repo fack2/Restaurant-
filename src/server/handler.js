@@ -54,7 +54,7 @@ const cuisineHandler = (request, response) => {
 	const type = request.url.split('=')[1];
 	getData(type, (error, result) => {
 		if (error) {
-			return error;
+			return errorHandler(request, response);
 		}
 		console.log('result', result);
 
