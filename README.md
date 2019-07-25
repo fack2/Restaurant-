@@ -2,18 +2,15 @@
 
 
 ## Description::hamburger: :coffee: :curry:
-We've created a website that shows the user several types of cuisines to choose
-from, and when the user clicks on one of them, it shows a list of restaurants
-that serve that type of cuisine, and it allows you to click on any resturant you
-want and see a list of details about it, like the menu and the restaurant's
-name.
+ a website that shows the user several types of cuisines to choose from, and when the user clicks on one of them, it shows a list of restaurants that serve that type of cuisine.It also allows you to add a resturant you want with a list of details about it using a form.
+
 
 
 ## User journey:
 
 - As a user I'm able to choose a cuisine.
-- As a user I'm able to choose a restaurant from the list.
-- As a user I should see some details about the restaurant I chose.
+- As a user I'm able to see a list of restaurants and some details about them.
+- As a user I'm able to add a new restaurant by filling a form.
 
 ## Wireframe:
 
