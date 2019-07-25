@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -15,4 +16,49 @@
     width: 30%;
     border: 1px solid black;
     border-radius: 5%;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#contact {
+    background: #F9F9F9;
+    padding: 6%;
+    margin: 38% 0%;
+    box-shadow: 0 0 20px 0 rgba(68, 19, 4, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 5%;
+}
+
+#contact input {
+    width: 92%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#contact button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: rgb(230, 64, 14);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+li {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 32px;
+    margin: 6% 0% 5% 40%;
 }
