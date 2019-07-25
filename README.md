@@ -1,12 +1,13 @@
-# Restaurant:
+# [Hebron Rest](https://hebron-rest.herokuapp.com/) :fork_and_knife:  [![Build Status](https://travis-ci.org/fack2/Restaurant-.svg?branch=master)](https://travis-ci.org/fack2/Restaurant-)
 
+
+## Description::hamburger: :coffee: :curry:
 We've created a website that shows the user several types of cuisines to choose
 from, and when the user clicks on one of them, it shows a list of restaurants
 that serve that type of cuisine, and it allows you to click on any resturant you
 want and see a list of details about it, like the menu and the restaurant's
 name.
 
-## Website link:
 
 ## User journey:
 
@@ -26,6 +27,13 @@ name.
     - 1.png
     - 2.png
     - 3.png
+    - AbuMazin.png
+    - TabonAlreef.png
+    - KFC.png
+    - RozaChrunchy.png
+    - Q-Cany.png
+    - Segafredo.png
+    - logo.png
   - index.html
   - style.css
   - index.js
@@ -33,7 +41,8 @@ name.
 - src:
 
   - database:
-
+    - test:
+      - databaseTest.js
     - db_build.js
     - db_build.sql
     - db_connection.js
@@ -49,8 +58,7 @@ name.
     - handler.js
     - router.js
     - server.js
-  - test:
-    - databaseTest.js
+ 
 
 * config.env
 * .gitignore
